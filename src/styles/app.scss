@@ -1,0 +1,19 @@
+// 在这个scss引入所有的样式
+@import './yo/usage/core/reset.scss';
+
+// 引入各个页面的样式
+@import './modules/header_nav.scss';
+@import './modules/home_page.scss';
+@import './modules/city.scss';
+@import './modules/login.scss';
+@import './modules/register.scss';
+@import './modules/film_hot.scss';
+@import './modules/film_future.scss';
+@import './modules/cinema_list.scss';
+@import './modules/cinema_detail.scss';
+@import './modules/cinema_film.scss';
+@import './modules/seat.scss';
+@import './modules/order.scss';
+@import './modules/pay.scss';
+@import './modules/wchat_pay.scss';
+@import './modules/person.scss';
