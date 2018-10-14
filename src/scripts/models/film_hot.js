@@ -2,12 +2,23 @@
 
 const M_data = ()=>{
     return $.ajax({
-        url: '/v4/api/billboard/home?__t=1539170753861',
+        url: '/v4/api/film/now-playing?page=1&count=7',
+        dataType:"json",
         success: (result) => {
           return result
         }
       })
 }
+const refer = (pageNo)=>{
+    return $.ajax({
+        url: '/v4/api/film/now-playing?page='+pageNo+'&count=7',
+        dataType:"json",
+        success: (result) => {
+          return result
+        }
+    })
+}
 export default {
-    M_data
+    M_data,
+    refer
 }

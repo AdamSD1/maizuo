@@ -4,12 +4,23 @@
 import file_hot from "../views/film_hot.html"
 import file_hot_model from "../models/film_hot"
 
-const render = ()=>{
-    document.querySelector('#root').innerHTML = file_hot
+//定义渲染数组
+var datasource = [];
+const render = async ()=>{
+
+    const datasource = (await file_hot_model.M_data()).data.films; 
+    renderList(datasource)
+    // const refer = datasource = (await file_hot_model.refer(2)).data.films; 
+    // console.log(refer)
 }
 
+//页面渲染函数
+const renderList = async (list) => {
+    let template = Handlebars.compile(file_hot);
+    let html = template({list});
+    $("#root").html(html)
+  }
 //暴露模块
-
 export default {
     render
 } 
