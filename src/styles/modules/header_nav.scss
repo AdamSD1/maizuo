@@ -1,4 +1,67 @@
 //header_nav的scss
+
 #root{
+    @include flexbox();
+    @include flex-direction(column);
+    height: 100%;
+}
+header{
+    width: 100%;
+    height: .5rem;
+    background: rgb(40, 40, 40);
+    line-height: .5rem;
+    color: white;
+    position: relative;
+    @include flexbox() ;
+    >div:nth-child(1){
+        width: .48rem;
+        text-align: center;
+        color: lightgray;
+        font-size: .15rem;
+    }
+    >div:nth-child(2){
+        @include flex();
+        font-size: .14rem;
+    }
+    >div:nth-child(3){
+        width: 1rem;
+        color: lightgray;
+        span:nth-child(2){
+            font-size: .09rem;
+        }
+
+        span:nth-child(3){
+            text-align: center;
+            display: inline-block;
+            width: .44rem;
+            font-size:.15rem;
+        }
+    }
+    #sideMenu{
+        position: absolute;
+        top: .5rem;
+        left: -2.5rem;
+        z-index: 10;
+        height: 7rem;
+        color: lightgray;
+        background: rgb(40, 40, 40);
+        
+        ul{
+    
+            li{
+                line-height: .5rem;
+                width: 2.5rem;
+                border-bottom: 1px solid rgb(6, 6, 6);
+                background: rgb(40, 40, 40);
+                text-indent: 1em;
+                span{
+                    float: right;
+                    margin-right: .2rem;
+                }
+            }
+        }
+       
+    }
+
     
 }

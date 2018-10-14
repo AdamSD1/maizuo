@@ -1,3 +1,4 @@
+
 // 1、创建一个webserver
 // 2、编译SASS
 // 3、基于CommonJS的模块化（webpack-stream插件）
@@ -94,17 +95,14 @@ gulp.task('copymock', () => {
 // 文件修改 watch
 gulp.task('watch', () => {
   gulp.watch('./src/*.html', ['copyhtml'])
-  // gulp-watch,实现文件的创建，修改，删除 watch
-  // 缺点：某些操作系统不支持
-  watch('./src/styles/**/*', () => {
-    gulp.start(['packscss'])
-  })
+  gulp.watch('./src/styles/**/*', ['packscss'])
+
   watch('./src/libs/**/*', () => {
     gulp.start(['copylibs'])
   })
-  // watch('./src/mock/**/*', () => {
-  //   gulp.start(['copymock'])
-  // })
+  watch('./src/mock/**/*', () => {
+    gulp.start(['copymock'])
+  })
   gulp.watch('./src/scripts/**/*', ['packjs'])
 })
 

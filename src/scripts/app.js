@@ -3,7 +3,6 @@
 import Router from './utils/router'
 import header_nav_Controller from './controllers/header_nav'
 import home_page_Controller from './controllers/home_page'
-import city_Controller from './controllers/city'
 import login_Controller from './controllers/login'
 import register_Controller from './controllers/register'
 import film_hot_Controller from './controllers/film_hot'
@@ -22,15 +21,17 @@ import person_Controller from './controllers/person'
 /* 使用区域 */
 // 顶部和侧边直接使用
 header_nav_Controller.render();
+//点击城市，切换内容
+header_nav_Controller.cityOnoff()
+
 
 // 将使用的页面都在路由中注册
 
 const router = new Router()
-//启动路由的监听
-router.init()
+
 //注册路由
-router.route('#home_page',home_page_Controller.render)
-router.route('#city',city_Controller.render)
+router.route('#home_page',home_page_Controller.wrap)
+router.route('#city',header_nav_Controller.cityOnoff)
 router.route('#login',login_Controller.render)
 router.route('#register',register_Controller.render)
 router.route('#film_hot',film_hot_Controller.render)
@@ -43,3 +44,6 @@ router.route('#order',order_Controller.render)
 router.route('#pay',pay_Controller.render)
 router.route('#wchat_pay',wchat_pay_Controller.render)
 router.route('#person',person_Controller.render)
+
+//启动路由的监听
+router.init()
