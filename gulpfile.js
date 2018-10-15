@@ -1,3 +1,4 @@
+
 // 1、创建一个webserver
 // 2、编译SASS
 // 3、基于CommonJS的模块化（webpack-stream插件）
@@ -85,10 +86,10 @@ gulp.task('copylibs', () => {
     .pipe(gulp.dest('./dev/libs'))
 })
 
-// copy mock
-gulp.task('copymock', () => {
-  return gulp.src('./src/mock/**/*')
-    .pipe(gulp.dest('./dev/mock'))
+// copy img
+gulp.task('copyimg', () => {
+  return gulp.src('./src/images/**/*')
+    .pipe(gulp.dest('./dev/images'))
 })
 
 // 文件修改 watch
@@ -102,13 +103,11 @@ gulp.task('watch', () => {
   gulp.watch('./src/libs/**/*', () => {
     gulp.start(['copylibs'])
   })
-  // watch('./src/mock/**/*', () => {
-  //   gulp.start(['copymock'])
-  // })
   gulp.watch('./src/scripts/**/*', ['packjs'])
+  gulp.watch('./src/images/**/*', ['packjs'])
 })
 
 // default task
-gulp.task('default', ['packscss', 'packjs', 'copyhtml', 'copyicons', 'copylibs', 'server', 'watch'], () => {
+gulp.task('default', ['packscss', 'packjs', 'copyhtml', 'copyicons', 'copylibs', 'server','copyimg', 'watch'], () => {
   console.log('all works!')
 })

@@ -6,20 +6,9 @@
             <div class="film_hot_title2">即将上映</div>
     </div>
     <ul class="film_hot_list">
-            {{#each list}}
-            <li>
-                <div class="film_hot_list_left">
-                    <img src="{{cover.origin}}" alt="">
-                </div>
-                <ul class="film_hot_list_right">
-                    <li><span class="film_hot_list_name">{{name}}</span><span class="film_hot_list_score">{{grade}}</span><span class="film_hot_list_jiantou">></span></li>
-                    <li class="film_hot_list_name">{{intro}}</li>
-                    <li><span class="film_hot_list_cinemaNum">{{cinemaCount}}</span>
-                        <span>家影院上映</span>
-                        <span class="film_hot_list_personNum">{{scheduleCount}}</span>
-                        <span>人购票</span></li>
-                </ul>
-            </li>
-            {{/each}}
     </ul>
+    <div class="foot">
+        <img src="/images/arrow.png"/>
+        <b>上拉加载更多...</b>
+      </div>
 </div>

@@ -1,0 +1,27 @@
+<!-- home_page首页内容 -->
+<div id="content">
+    <div id="banner"><img src="https://pic.maizuo.com/h5PicUpload/062a965ab71db31fe0b7ad6f8c529935.jpg" alt=""></div>
+<ul id="contentlist" class="films">
+    {{#each list}}
+    <li>
+        <img src="{{cover.origin}}" alt="">
+        <div>
+            <p>{{name}}</p>
+            <p><span>{{cinemaCount}}</span>人购票，<span>{{watchCount}}</span>家影院上映</p>
+            <span>{{grade}}</span>
+        </div>
+    </li>
+    {{/each}}
+</ul>
+<div id="morefilms">更多电影</div>
+<div class="futruefilms">
+    <div>
+        <div class="line"></div>
+        <div>即将上映</div>
+    </div>
+    <ul id="futruefilms" class="films">
+
+    </ul>
+</div>
+</div>
+

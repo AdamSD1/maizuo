@@ -1,9 +1,6 @@
 // 电影详情热映
-body{
-    overflow-y: scroll;
-}
 .film_hot_content{
-    padding-top: .5rem;
+    // padding-top: .5rem;
     padding-left: .15rem;
     padding-right: .15rem;
     width: 100%;
@@ -91,4 +88,27 @@ body{
             }
         }
     }
+
+    .foot {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        height: .4rem;
+        &::after {
+          border: none;
+        }
+      }
+      .foot img {
+        width: .16rem;
+        height: .16rem;
+        transition: transform 150ms;
+        -webkit-transition: transform 150ms;
+      }
+      .up {
+        transform: rotate(360deg) !important;
+        -webkit-transform: rotate(360deg) !important;
+      }
+      .down {
+        @include transform(rotate(180deg));
+      }
 }

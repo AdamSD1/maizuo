@@ -9,7 +9,7 @@ const M_data = ()=>{
         }
       })
 }
-const refer = (pageNo)=>{
+const loadmore = (pageNo)=>{
     return $.ajax({
         url: '/v4/api/film/now-playing?page='+pageNo+'&count=7',
         dataType:"json",
@@ -20,5 +20,5 @@ const refer = (pageNo)=>{
 }
 export default {
     M_data,
-    refer
+    loadmore
 }

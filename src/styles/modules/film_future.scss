@@ -1,1 +1,117 @@
 // 电影详情热映样式
+
+// 电影详情热映
+.film_future_content{
+    // padding-top: .5rem;
+    padding-left: .15rem;
+    padding-right: .15rem;
+    width: 100%;
+    background-color: rgb(249, 249, 249);
+    .film_future_title{
+        width: 100%;
+        height: .45rem;
+        @include flexbox();
+        .film_future_title1,.film_future_title2{
+            font-size: .16rem;
+            height: 100%;
+            width: 50%;
+            text-align: center;
+            line-height: .45rem;
+        }
+        .film_future_title2{
+            color: #fe6e00;
+            border-bottom: .03rem solid #fe6e00; 
+        }
+        .film_future_title1{
+            color:#6a6a6a;
+            border-bottom: .01rem solid #fe6e00; 
+        }
+    }
+
+    .film_future_list{
+        width: 100%;
+        >li{
+            width: 100%;
+            height: 1.25rem;
+            border-bottom: .01rem dashed #c9c9c9;
+            padding: .2rem 0;
+            @include flexbox();
+            >.film_future_list_left{
+                height: 100%;
+                width: .6rem;
+                background-color: #532e12;
+                >img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            >.film_future_list_right{
+                height: 100%;
+                width: 2.43rem;
+                margin-left: .15rem;
+                >li:first-of-type{
+                    width: 100%;
+                    height: .32rem;
+                    font-size: .16rem;
+                    >.film_future_list_name{
+                        display: inline-block;
+                        height: 100%;
+                        width: 2.11rem;
+                        line-height: .32rem;
+                    }
+                    >.film_future_list_score{
+                        color: #fc7103;
+                    }
+                    >.film_future_list_jiantou{
+                        font-size: 12px;
+                        color: rgb(203, 209, 223);
+                    }
+                }
+                >li:nth-of-type(2){
+                    width: 100%;
+                    height: .24rem;
+                    font-size:.12rem;
+                    color: #8e8e8e;
+                    line-height: .24rem;
+                }
+                >li:nth-of-type(3){
+                    width: 100%;
+                    height: .24rem;
+                    font-size:.12rem;
+                    color: #fc7103;
+                    line-height: .24rem;
+                    >.film_future_list_cinemaNum{
+                        color: #fc7103;
+                    }
+                    >.film_future_list_personNum{
+                        margin-left: .3rem;
+                        color: #fc7103;
+                    }
+                }
+            }
+        }
+    }
+
+    .foot {
+        @include flexbox();
+        @include align-items(center);
+        @include justify-content(center);
+        height: .4rem;
+        &::after {
+          border: none;
+        }
+      }
+      .foot img {
+        width: .16rem;
+        height: .16rem;
+        transition: transform 150ms;
+        -webkit-transition: transform 150ms;
+      }
+      .up {
+        transform: rotate(360deg) !important;
+        -webkit-transform: rotate(360deg) !important;
+      }
+      .down {
+        @include transform(rotate(180deg));
+      }
+}
