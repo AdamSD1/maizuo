@@ -13,7 +13,11 @@ var pageNo = 2;
 const render = async () => {
     $('main').html(film_future)
     datasource = (await film_future_model.M_data()).data.films;
+    datasource.forEach(function(item,index,array){
+         item.premiereAt = format(item.premiereAt)
+    })
     await renderList(datasource)
+
     scroll()
     hot_future();
 }
@@ -42,13 +46,16 @@ const scroll = () => {
             this.scrollTo(0, this.maxScrollY + 40)
         } else if (maxY >= 0) {
             var cn = this.maxScrollY;
-            console.log(this.maxScrollY)
 
             foot.attr('src', '/images/ajax-loader.gif')
             let result = await film_future_model.loadmore(++pageNo)
+            let jieguo = result.data.films
+            jieguo.forEach(function(item,index,array){
+                item.premiereAt = format(item.premiereAt)
+           })
             datasource = [
                 ...datasource,
-                ...result.data.films
+                ...jieguo
             ]
             renderList(datasource)
             this.refresh();
@@ -78,6 +85,27 @@ const hot_future = () => {
     })
 }
 
+//处理时间戳
+function add0(m){return m<10?'0'+m:m }
+function format(shijianchuo)
+{
+//shijianchuo是整数，否则要parseInt转换
+var time = new Date(shijianchuo);
+var m = time.getMonth()+1;
+var d = time.getDate();
+var zhou = time.getDay();
+var xingqi = '';
+switch(zhou){
+    case 1:xingqi = '星期一';break;
+    case 2:xingqi = '星期二';break;
+    case 3:xingqi = '星期三';break;
+    case 4:xingqi = '星期四';break;
+    case 5:xingqi = '星期五';break;
+    case 6:xingqi = '星期六';break;
+    case 7:xingqi = '星期日';break;
+}
+return add0(m)+'月'+add0(d)+'日上映'+'      '+xingqi;
+}
 //暴露模块
 
 export default {

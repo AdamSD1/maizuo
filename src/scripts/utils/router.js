@@ -1,4 +1,3 @@
-import { deflate } from "zlib";
 
 //书写路由
 function Router(){

@@ -7,6 +7,7 @@ import login_Controller from './controllers/login'
 import register_Controller from './controllers/register'
 import film_hot_Controller from './controllers/film_hot'
 import film_future_Controller from './controllers/film_future'
+import film_detail_Controller from './controllers/film_detail'
 import cinema_list_Controller from './controllers/cinema_list'
 import cinema_detail_Controller from './controllers/cinema_detail'
 import cinema_film_Controller from './controllers/cinema_film'
@@ -38,6 +39,7 @@ router.route('#film_hot',film_hot_Controller.render)
 router.route('#film_future',film_future_Controller.render)
 router.route('#cinema_list',cinema_list_Controller.render)
 router.route('#cinema_detail',cinema_detail_Controller.render)
+router.route('#film_detail',film_detail_Controller.render)
 router.route('#cinema_film',cinema_film_Controller.render)
 router.route('#seat',seat_Controller.render)
 router.route('#order',order_Controller.render)
