@@ -1,4 +1,37 @@
 <!-- cinema_detail的页面 -->
-<div>
-    我是cinema_detail页面
+<div class="cinema_detail_content">
+    <img src="{{logoUrl}}" alt="" class="cinema_detail_img">
+    <ul class="cinema_detail_info">
+        <li class="cinema_detail_dingzuo">
+                <i class="iconfont">&#xe669;</i>
+            <div class="cinema_detail_dingzuo_box">
+                <h3>订座票</h3>
+                <span>到剧场内自助选票</span>
+            </div>
+            <button class="cinema_detail_liji">立即订座</button>
+        </li>
+
+        <li class="cinema_detail_dizhi">
+            <i class="iconfont">&#xe581;</i>
+            <h4>{{address}}</h4>
+        </li>
+        <li class="cinema_detail_dianhua">
+            <i class="iconfont">&#xe501;</i>
+            <h4>{{telephones}}</h4>
+        </li>
+    </ul>
+    <div class="cinema_detail_icon">
+        <ul>
+            <li class="cinema_detail_li_change"><i class="iconfont">&#xe655;</i><p>取票</p></li>
+            <li><i class="iconfont">&#xe64c;</i><p> 3D</p></li>
+            <li><i class="iconfont">&#xe657;</i><p>停车</p></li>
+            <li><i class="iconfont">&#xe650;</i><p>优惠</p></li>
+            <li><i class="iconfont">&#xe652;</i><p>交通</p></li>
+        </ul>
+        <p>影院内</p>
+        <p class="cinema_detail_p_hidden">{{a}}</p>
+        <p class="cinema_detail_p_hidden">{{b}}</p>
+        <p class="cinema_detail_p_hidden">暂无信息</p>
+        <p class="cinema_detail_p_hidden">暂无信息</p>
+    </div>
 </div>

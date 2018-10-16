@@ -2,7 +2,7 @@
 
 const M_data = ()=>{
     return $.ajax({
-        url: '/v4/api/billboard/home?__t=1539170753861',
+        url: 'v4/api/cinema?__t=1539701587722',
         success: (result) => {
           return result
         }

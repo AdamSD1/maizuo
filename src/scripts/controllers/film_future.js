@@ -17,9 +17,9 @@ const render = async () => {
          item.premiereAt = format(item.premiereAt)
     })
     await renderList(datasource)
-
     scroll()
     hot_future();
+    skip_detail();
 }
 
 
@@ -59,6 +59,7 @@ const scroll = () => {
             ]
             renderList(datasource)
             this.refresh();
+            skip_detail();
             this.scrollTo(0, cn)
             foot.attr('src', '/images/arrow.png')
                 .removeClass('down')
@@ -70,9 +71,7 @@ const scroll = () => {
 //页面渲染函数
 const renderList = async (list) => {
         let template = Handlebars.compile(film_future_list);
-        let html = template({
-            list
-        });
+        let html = template({list});
         $(".film_future_list").html(html);
 }
 // 添加页面转化方法
@@ -106,6 +105,18 @@ switch(zhou){
 }
 return add0(m)+'月'+add0(d)+'日上映'+'      '+xingqi;
 }
+
+  //添加跳转到详情页的函数
+  const skip_detail = ()=>{
+    $(".film_future_list>li").on("tap",function(){
+      // location.hash = "#film_detail";
+      // location.search = this.id;
+      location.href ="?"+this.id+"#film_detail";
+      
+    })
+}
+
+
 //暴露模块
 
 export default {
