@@ -1,1 +1,46 @@
 // person的样式
+.person_head{
+    @include flexbox();
+    height: 1.5rem;
+    background: #303030;
+    color: #fff;
+    >div:nth-child(1){
+        padding: .36rem .34rem;
+        div:nth-child(1){
+            border-radius: 50%;
+            width: .92rem;
+            height: .92rem;
+            overflow: hidden;
+        }
+        img{
+            width: .92rem;
+        }
+    }
+    >div:nth-child(2){
+        padding: .5rem 0;
+    }
+}
+
+.person_ul{
+    li{
+        line-height: .6rem;
+        background: #fff;
+        font-size: .12rem;
+        color: #222;
+        padding: 0 .2rem;
+        span:nth-child(3){
+            float: right;
+            font-size: .12rem;
+            color: gray;
+        }
+        span:nth-child(4){
+            float: right;
+        }
+    }
+    .person_li{
+        margin-top: .14rem;
+    }
+    li:not([class='person_li']){
+        border-bottom: 1px solid #eee;
+    }
+}

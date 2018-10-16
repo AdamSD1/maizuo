@@ -1,1 +1,41 @@
 // wchat_pay的样式
+.chat_head{
+    padding: .6rem 0;
+    text-align: center;
+    div{
+        font-size: .16rem;
+    }
+    p{
+        font-size: .3rem;
+    }
+}
+
+.chat_content{
+    background: #fff;
+    div:nth-child(1){
+        line-height: .4rem;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 0 .1rem;
+    }
+    div:nth-child(2){
+        line-height: .6rem;
+        border-bottom: 1px solid #eee;
+        padding: 0 .1rem;
+    }
+}
+
+.chat_btnbar{
+    padding: 0 .2rem;
+    #chat_btn{
+        width: 100%;
+        margin-top: .2rem;
+        height: .4rem;
+        font-size: .18rem;
+        background: rgb(4, 190, 2);
+        border: none;
+        border-radius: .16rem;
+        color: #fff;
+        letter-spacing: 0.5em;
+    }
+}

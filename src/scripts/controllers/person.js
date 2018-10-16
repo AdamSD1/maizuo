@@ -6,9 +6,8 @@ import person_modle from '../models/person'
 
 const render = ()=>{
     //在此进行逻辑处理
-    document.querySelector('#root').innerHTML = person;
-    //数据已经获取到
-    console.log(person_modle.M_data())
+   $('main').html(person)
+
 }
 
 //暴露模块

@@ -4,13 +4,15 @@
 import homeTpl from '../views/header_nav.html'
 import homeCity from '../views/city.html'
 import CityDate from './home_page'
-
-
+import seatTpl from '../views/seat.html'
+import city from './city'
 
 
 const render = ()=>{
     document.querySelector('#root').innerHTML = homeTpl;
     changeSide();
+    cityOnoff();
+    mymessage();
 }
 //侧边栏显隐
 const changeSide = ()=>{
@@ -33,18 +35,48 @@ const changeSide = ()=>{
 //城市点击显隐
 const cityOnoff = ()=>{
     $('#city').on('tap',function(){
-        new Promise((resolve,reject)=>{
-            $('main>div:nth-child(1)').html(homeCity);          
+        location.hash = "#city";      
+    }) 
+}
+//城市数据加载
+const cityAdd = ()=>{
+    new Promise((resolve,reject)=>{
+        $('main').html(homeCity);   
+        resolve();
+    }).then(()=>{
+        return  new Promise((resolve,reject)=>{
+            CityDate.render_city();
+            scroll()
             resolve();
         }).then(()=>{
-            CityDate.render_city();
+           CityDate.render_city();
             location.hash = "#city";
         })        
     }) 
+            city.render();            
+        }                  
+
+//滚动
+//content内容滚动
+const scroll = ()=>{
+    let posScroll = new BScroll('main')
+}
+//定座测试
+const seat = ()=>{
+    $('.manicon').on('tap',function(){
+        location.hash = "#seat";
+    })
+}
+//点击我的
+const mymessage = ()=>{
+    $('.mymessage').on('tap',function(){
+        location.hash = "#person";
+    })
 }
 //暴露模块
 
 export default {
     render,
-    cityOnoff
+    seat,
+    cityAdd
 }
