@@ -6,8 +6,10 @@ import pay_modle from '../models/pay'
 
 const render = ()=>{
     //在此进行逻辑处理
-    document.querySelector('#root').innerHTML = pay;
-
+    $('main').html(pay);
+    $("#pay_sure").on("tap",function(){
+        location.hash = "#wchat_pay"
+    })
 }
 
 //暴露模块

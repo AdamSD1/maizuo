@@ -6,7 +6,7 @@ import wchat_pay_modle from '../models/wchat_pay'
 
 const render = ()=>{
     //在此进行逻辑处理
-    document.querySelector('#root').innerHTML = wchat_pay;
+    $('main').html(wchat_pay);
 }
 
 //暴露模块

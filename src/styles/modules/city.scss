@@ -1,1 +1,27 @@
 //城市的样式
+#cityBar{
+    width: 100%;
+    background: white;
+    color: gray;
+    div{
+        line-height: .4rem;
+        background: rgb(235, 235, 235);
+        text-indent: 1em;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap; 
+        background: #fff; 
+        li{
+            width: 25%;
+            line-height: .4rem;
+            height: .4rem;
+            background: white;
+            text-align: center;
+            font-size: .12rem;
+           overflow: hidden;
+        }  
+    }
+}
+
+

@@ -1,1 +1,75 @@
 // order的样式
+.order_content{
+    padding: .02rem .18rem;
+    color: #fff;
+    background: #0da7c5;
+    position: relative;
+    h1{
+        font-size: .18rem;
+        margin: .18rem 0;
+    }
+    >p{
+        font-size: .12rem;
+        margin: .1rem 0;
+    }
+    >div{
+        margin: .1rem 0;
+        font-size: .12rem;
+    }
+    .order_date{
+        color:#ffff82;
+    }
+    .order_price{
+        position: absolute;
+        top: .2rem;
+        right: .2rem;
+        font-size: .4rem;
+    }
+}
+.order_li {
+    padding: 0 .14rem;
+    li{
+        font-size: .12rem;
+        padding: .24rem 0;
+        border-bottom: 1px dashed #ccc;
+        line-height: .2rem;
+        span:nth-child(1){
+            float: left;
+        }
+        
+        span:nth-child(3){
+            float: right;
+        }
+        span:nth-child(2){
+            float: right;
+            font-size: .12rem;
+        }
+    }
+}
+
+#order_footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    >div{
+        display: flex;
+        border-top: 1px solid #ccc;
+        div:nth-child(1){
+            @include flex();
+            p{
+                font-size: .2rem;
+                line-height: .4rem;
+            }
+        }
+       #order_sure{
+            width: 1rem;
+            height: .4rem;
+            line-height: .4rem;
+            text-align: center;
+            background: #ff6640;
+            color: #fff;
+            font-size: .16rem;
+        }
+    }
+}

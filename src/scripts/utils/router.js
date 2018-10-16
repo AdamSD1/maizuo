@@ -18,7 +18,9 @@ Router.prototype.route = function(hash,cb){
 Router.prototype.refresh = function(){
     let hash  = location.hash || '#home_page'
     this.currentHash = hash
-    console.log(this.routes)
+    // console.log(this.currentHash)
+    // console.log(this.routes[this.currentHash])
+    // console.log(this.routes)
     this.routes[this.currentHash]()
 }
 
