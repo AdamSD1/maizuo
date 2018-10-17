@@ -1107,6 +1107,167 @@ main {
     transform: translateX(-50%);
     bottom: .2rem; }
 
+.cinema_list_content {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll; }
+  .cinema_list_content > .cinema_quyu {
+    height: .4rem;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: .01rem;
+    font-size: .14rem;
+    line-height: .4rem;
+    padding-left: .16rem;
+    color: #636363; }
+  .cinema_list_content > .cinema_quyu_list > .cinema_quyu_list_li {
+    height: .96rem;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0 12px 16px;
+    border-bottom: 0.01rem solid #e1e1e1; }
+    .cinema_list_content > .cinema_quyu_list > .cinema_quyu_list_li > p:first-of-type {
+      height: .3rem;
+      font-size: .16rem;
+      margin-bottom: .05rem;
+      position: relative; }
+      .cinema_list_content > .cinema_quyu_list > .cinema_quyu_list_li > p:first-of-type > i {
+        font-size: .14rem;
+        border-radius: 50%;
+        border: 0.01rem solid #feb97d;
+        color: #feb97d; }
+      .cinema_list_content > .cinema_quyu_list > .cinema_quyu_list_li > p:first-of-type > span {
+        color: #c6c9d1;
+        position: absolute;
+        right: .2rem; }
+    .cinema_list_content > .cinema_quyu_list > .cinema_quyu_list_li > p:nth-of-type(2) {
+      font-size: .12rem;
+      width: 2.76rem;
+      height: .16rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: #cccccc; }
+    .cinema_list_content > .cinema_quyu_list > .cinema_quyu_list_li > p:nth-of-type(3) {
+      font-size: .12rem;
+      width: 2.76rem;
+      height: .16rem;
+      color: #cccccc;
+      margin-top: .05rem; }
+
+.cinema_detail_content {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto; }
+  .cinema_detail_content .cinema_detail_img {
+    display: block;
+    width: 100%;
+    height: 1.8rem;
+    background-color: aquamarine; }
+  .cinema_detail_content .cinema_detail_info > li {
+    width: 100%;
+    height: 1.01rem;
+    background-color: #f9f9f9;
+    padding: .25rem .17rem 0;
+    text-align: center; }
+  .cinema_detail_content .cinema_detail_info > .cinema_detail_dingzuo {
+    display: flex;
+    position: relative; }
+    .cinema_detail_content .cinema_detail_info > .cinema_detail_dingzuo i {
+      display: block;
+      height: 100%;
+      width: 0.42rem;
+      font-size: .28rem;
+      color: #fd9060; }
+    .cinema_detail_content .cinema_detail_info > .cinema_detail_dingzuo .cinema_detail_dingzuo_box {
+      flex: 1;
+      text-align: left;
+      border-bottom: 0.01rem dashed #d6d6d6; }
+      .cinema_detail_content .cinema_detail_info > .cinema_detail_dingzuo .cinema_detail_dingzuo_box > span {
+        font-size: .12rem;
+        color: #737373; }
+    .cinema_detail_content .cinema_detail_info > .cinema_detail_dingzuo .cinema_detail_liji {
+      position: absolute;
+      border: none;
+      background-color: #fe8233;
+      color: white;
+      height: .34rem;
+      width: .94rem;
+      font-size: .13rem;
+      border-radius: .38rem;
+      right: .2rem; }
+  .cinema_detail_content .cinema_detail_info > .cinema_detail_dizhi {
+    display: flex;
+    height: 1.01rem; }
+    .cinema_detail_content .cinema_detail_info > .cinema_detail_dizhi i {
+      display: block;
+      height: 100%;
+      width: 0.42rem;
+      font-size: .28rem;
+      color: #8fafe1; }
+    .cinema_detail_content .cinema_detail_info > .cinema_detail_dizhi h4 {
+      flex: 1;
+      text-align: left;
+      padding-top: .15rem;
+      font-size: .14rem;
+      font-weight: normal;
+      border-bottom: 0.01rem dashed #d6d6d6; }
+  .cinema_detail_content .cinema_detail_info > .cinema_detail_dianhua {
+    display: flex; }
+    .cinema_detail_content .cinema_detail_info > .cinema_detail_dianhua i {
+      display: block;
+      height: 100%;
+      width: 0.42rem;
+      font-size: .28rem;
+      color: #df8f9f; }
+    .cinema_detail_content .cinema_detail_info > .cinema_detail_dianhua h4 {
+      flex: 1;
+      text-align: left;
+      padding-top: .15rem;
+      font-size: .14rem;
+      font-weight: normal;
+      border-bottom: 0.01rem dashed #d6d6d6; }
+  .cinema_detail_content .cinema_detail_icon {
+    width: 100%;
+    height: 1.55rem;
+    margin-top: .15rem;
+    padding: .15rem 0 .3rem;
+    background-color: #f9f9f9; }
+    .cinema_detail_content .cinema_detail_icon > ul {
+      width: 100%;
+      height: .8rem;
+      display: flex;
+      padding-left: .17rem;
+      padding-right: .17rem; }
+      .cinema_detail_content .cinema_detail_icon > ul > .cinema_detail_li_change {
+        border-bottom: .03rem solid #fe8233; }
+        .cinema_detail_content .cinema_detail_icon > ul > .cinema_detail_li_change i {
+          color: #fda36a;
+          border: 0.01rem solid #fda36a; }
+    .cinema_detail_content .cinema_detail_icon > ul > li {
+      width: .78rem;
+      height: .76rem;
+      border-bottom: 0.01rem solid #d6d6d6;
+      margin-bottom: .15rem;
+      text-align: center;
+      line-height: .50rem; }
+      .cinema_detail_content .cinema_detail_icon > ul > li > i {
+        font-size: .38rem;
+        border-radius: 50%;
+        border: 0.01rem solid gainsboro;
+        color: gainsboro; }
+      .cinema_detail_content .cinema_detail_icon > ul > li > p {
+        margin-top: -.25rem;
+        color: #737373;
+        font-size: .12rem; }
+    .cinema_detail_content .cinema_detail_icon > p {
+      width: 100%;
+      height: .18rem;
+      padding: 0 .17rem;
+      font-size: .12rem; }
+    .cinema_detail_content .cinema_detail_icon .cinema_detail_p_hidden {
+      display: none; }
+
 main {
   display: -webkit-box;
   display: -webkit-flex;
