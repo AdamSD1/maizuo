@@ -19,7 +19,7 @@ const render = async () => {
     await renderList(datasource)
 
     scroll()
-    hot_future();
+
 }
 
 

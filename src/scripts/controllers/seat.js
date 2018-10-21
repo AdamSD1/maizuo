@@ -29,7 +29,8 @@ const scroll = ()=>{
 //渲染数据
 const seatDate =async ()=>{
     let result = await seat_modle.M_data()
-    var list =  result.data.seatingChart.seats
+    console.log(result)
+    var list =  result.data.seatingChart.seats;
     for(var i=0;i<list.length;i++){
         var div = $("<div>").appendTo(".contentseats")
         div.css("top",(list[i].row*0.3+0.1).toFixed(2)+"rem")
