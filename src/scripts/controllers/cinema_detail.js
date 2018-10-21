@@ -35,6 +35,10 @@ const renderList = async (list) => {
           $(this).addClass("cinema_detail_li_change").siblings().removeClass("cinema_detail_li_change");
           $(".cinema_detail_icon>p").eq($(this).index()).removeClass("cinema_detail_p_hidden").siblings("p").addClass("cinema_detail_p_hidden")
       })
+      $(".cinema_detail_liji").on("tap",function(){
+          location.hash = "#cinema_film"
+        // alert(1);
+      })
   }
 
 //暴露模块
