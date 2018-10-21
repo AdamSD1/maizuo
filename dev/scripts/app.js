@@ -3534,7 +3534,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//cinema_film的模型层\nva
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//cinema_list的模型层\nvar M_data = function M_data() {\n  document.cookie = \"cityId=15\";\n  return $.ajax({\n    url: 'v4/api/cinema?__t=1539701587722',\n    success: function success(result) {\n      return result;\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  M_data: M_data\n});\n\n//# sourceURL=webpack:///./src/scripts/models/cinema_list.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n//cinema_list的模型层\nvar M_data = function M_data() {\n  return $.ajax({\n    url: 'v4/api/cinema?__t=1539701587722',\n    success: function success(result) {\n      return result;\n    }\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  M_data: M_data\n});\n\n//# sourceURL=webpack:///./src/scripts/models/cinema_list.js?");
 
 /***/ }),
 
