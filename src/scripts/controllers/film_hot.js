@@ -16,6 +16,7 @@ const render = async ()=>{
     await renderList(datasource)
     scroll()
     hot_future();
+    skip_detail();
 }
 
 
@@ -43,8 +44,6 @@ const scroll = () => {
         } 
         else if (maxY >= 0) {  
          var cn = this.maxScrollY;
-         console.log(this.maxScrollY)
-
           foot.attr('src', '/images/ajax-loader.gif')
           let result = await file_hot_model.loadmore(++pageNo)       
            datasource = [
@@ -52,6 +51,7 @@ const scroll = () => {
             ...result.data.films
           ]
           renderList(datasource)
+          skip_detail();
           this.refresh();
           this.scrollTo(0,cn)
           foot.attr('src', '/images/arrow.png')
@@ -77,6 +77,16 @@ const renderList = async (list) => {
       location.hash = "#film_future"
     })
   }
+  //添加跳转到详情页的函数
+  const skip_detail = ()=>{
+      $(".film_hot_list>li").on("tap",function(){
+        location.href ="?"+this.id+"#film_detail";
+        // location.href ="#film_detail";
+        localStorage.film_id = this.id
+      })
+  }
+
+
 //暴露模块
 export default {
     render

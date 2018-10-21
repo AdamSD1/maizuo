@@ -20,7 +20,7 @@ const render2 =async ()=>{
     var list =  result2.data.films
     var template2 = Handlebars.compile(home_page_2)
     let html2 = template2({ list })
-    $("#futruefilms").html(html2)
+    await  $("#futruefilms").html(html2)
     scroll()
 }
 

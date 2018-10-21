@@ -28,9 +28,23 @@ const scroll = ()=>{
 
 //渲染数据
 const seatDate =async ()=>{
-    let result = await seat_modle.M_data()
-    console.log(result)
-    var list =  result.data.seatingChart.seats;
+    let result = await seat_modle.M_data3()
+    // let data1 = result.data.film.premiereAt;
+    console.log(result.data.schedules)
+    console.log(result.data.schedules[0].film.id)
+    console.log(result.data.schedules[0].hall.name)
+    for(var i=0;i<result.data.schedules.length;i++){
+        if(localStorage['film_id']==result.data.schedules[i].film.id){
+            localStorage["dnname"] = result.data.schedules[0].film.name;
+            $('#details>div span').text(result.data.schedules[0].hall.name)
+            $('#details>div p').text(localStorage["dncinema"])
+
+            break;
+        }
+    }
+    let result2 = await seat_modle.M_data4()
+    console.log(result2.data.seatingChart.seats)
+    var list =  result2.data.seatingChart.seats;
     for(var i=0;i<list.length;i++){
         var div = $("<div>").appendTo(".contentseats")
         div.css("top",(list[i].row*0.3+0.1).toFixed(2)+"rem")
@@ -63,6 +77,8 @@ const seatDate =async ()=>{
                 })
             }
            
+        }else{
+            $('#footerbar').show();
         }
     })
 

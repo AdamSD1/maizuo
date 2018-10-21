@@ -10,7 +10,8 @@ import city from './city'
 
 const render = ()=>{
     document.querySelector('#root').innerHTML = homeTpl;
-    location.hash = "#home_page"
+    document.cookie = "cityName=北京";
+    document.cookie = "cityId=12";
     changeSide();
     cityOnoff();
 
