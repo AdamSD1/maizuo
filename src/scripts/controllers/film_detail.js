@@ -8,8 +8,8 @@ const render =async ()=>{
     let shuju = (await film_detail_model.M_data());
     let result = shuju.data.film;
     data_handling(result);
-    console.log(result)
     renderList(result);
+    film_detail_btnClick();
 }
 
 //页面渲染函数
@@ -43,6 +43,12 @@ var zhou = time.getDay();
 return add0(m)+'月'+add0(d)+'日上映';
 }
 
+//按钮点击事件
+const film_detail_btnClick = ()=>{
+    $('.film_detail_button').on('tap',function(){
+        location.hash  = "#cinema_list";
+    })
+}
 //暴露模块
 
 export default {
