@@ -1,8 +1,9 @@
 //cinema_list的模型层
 
 const M_data = ()=>{
+    document.cookie = "cityId=15"
     return $.ajax({
-        url: '/v4/api/billboard/home?__t=1539170753861',
+        url: 'v4/api/cinema?__t=1539701587722',
         success: (result) => {
           return result
         }

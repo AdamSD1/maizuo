@@ -22,6 +22,7 @@ Router.prototype.refresh = function(){
 
 //路由切换监听
 Router.prototype.init = function(){
+    //第一次页面加载时
     window.addEventListener('load',this.refresh.bind(this))
     window.addEventListener('hashchange',this.refresh.bind(this))
 }

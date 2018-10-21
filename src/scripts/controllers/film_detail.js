@@ -17,7 +17,8 @@ const renderList = async (list) => {
     let template = Handlebars.compile(film_detail);
     //参数是对象
     let html = template(list);
-    $('main').html(html)
+    $('main').html(html);
+    $(".top_name").text(list.name)
   }
 
 //数据处理函数
