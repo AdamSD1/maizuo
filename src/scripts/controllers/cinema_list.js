@@ -63,6 +63,17 @@ function tag_list(data) {
             $(this).next().html("");
             $(this).attr("data-status","off")
         }
+        list_li_skip();
+    })
+    
+}
+
+//处理页面跳转
+function list_li_skip(){
+    console.log(1);
+    $(".cinema_quyu_list_li").on("tap",function(){
+        location.href ="?"+this.id+"#cinema_detail";
+        localStorage.cinema_id = this.id
     })
 }
 //暴露模块

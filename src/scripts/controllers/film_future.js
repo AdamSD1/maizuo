@@ -109,10 +109,9 @@ return add0(m)+'月'+add0(d)+'日上映'+'      '+xingqi;
   //添加跳转到详情页的函数
   const skip_detail = ()=>{
     $(".film_future_list>li").on("tap",function(){
-      // location.hash = "#film_detail";
-      // location.search = this.id;
       location.href ="?"+this.id+"#film_detail";
-      
+      localStorage.film_id = this.id
+
     })
 }
 

@@ -1162,8 +1162,7 @@ main {
   .cinema_detail_content .cinema_detail_img {
     display: block;
     width: 100%;
-    height: 1.8rem;
-    background-color: aquamarine; }
+    height: 1.8rem; }
   .cinema_detail_content .cinema_detail_info > li {
     width: 100%;
     height: 1.01rem;
@@ -1267,6 +1266,97 @@ main {
       font-size: .12rem; }
     .cinema_detail_content .cinema_detail_icon .cinema_detail_p_hidden {
       display: none; }
+
+.cinema_film_content {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll; }
+  .cinema_film_content .cinema_film_show {
+    height: 1.65rem;
+    width: 100%;
+    overflow-x: scroll;
+    padding-top: .12rem;
+    background-color: #38403e; }
+    .cinema_film_content .cinema_film_show > .cinema_film_show_box {
+      height: 100%;
+      width: 11.5rem;
+      transform: translate3d(105px, 0px, 0px);
+      display: flex; }
+      .cinema_film_content .cinema_film_show > .cinema_film_show_box > div {
+        height: 100%;
+        width: 1.05rem;
+        display: flex;
+        flex-direction: column;
+        padding: 0 .1rem; }
+        .cinema_film_content .cinema_film_show > .cinema_film_show_box > div > img {
+          display: block;
+          width: 100%;
+          height: 80%;
+          opacity: .6; }
+        .cinema_film_content .cinema_film_show > .cinema_film_show_box > div > p {
+          flex: 1;
+          color: white;
+          text-align: center;
+          font-size: .12rem;
+          line-height: .3rem; }
+  .cinema_film_content .cinema_film_info {
+    width: 100%;
+    overflow: hidden; }
+    .cinema_film_content .cinema_film_info > .cinema_film_time {
+      width: 100%;
+      height: .4rem;
+      display: flex;
+      border-bottom: 0.01rem solid #e9681f; }
+      .cinema_film_content .cinema_film_info > .cinema_film_time > li {
+        width: 33.3%;
+        height: 100%;
+        text-align: center;
+        line-height: .4rem;
+        font-size: .05rem;
+        color: #7c7c7c;
+        background-color: aliceblue; }
+      .cinema_film_content .cinema_film_info > .cinema_film_time > .li_bottom {
+        border-bottom: 0.05rem solid #e9681f; }
+    .cinema_film_content .cinema_film_info > .cinema_film_changci {
+      width: 100%;
+      overflow: hidden;
+      text-align: center; }
+      .cinema_film_content .cinema_film_info > .cinema_film_changci > span {
+        display: inline-block;
+        margin-top: .30rem; }
+      .cinema_film_content .cinema_film_info > .cinema_film_changci > li {
+        width: 100%;
+        height: .74rem;
+        padding: .11rem .2rem 0;
+        background-color: aliceblue; }
+        .cinema_film_content .cinema_film_info > .cinema_film_changci > li > div {
+          height: 100%;
+          width: 100%;
+          border-bottom: 0.01rem dashed #d9d9d9; }
+          .cinema_film_content .cinema_film_info > .cinema_film_changci > li > div > p:first-of-type {
+            width: 100%;
+            height: .25rem;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: .16rem; }
+            .cinema_film_content .cinema_film_info > .cinema_film_changci > li > div > p:first-of-type > .cinema_film_ticket_money {
+              color: #f67222; }
+          .cinema_film_content .cinema_film_info > .cinema_film_changci > li > div > p:nth-of-type(2) {
+            position: relative;
+            height: .2rem;
+            font-size: .05rem;
+            color: #939393;
+            display: flex;
+            justify-content: space-between; }
+            .cinema_film_content .cinema_film_info > .cinema_film_changci > li > div > p:nth-of-type(2) > .cinema_film_ticket_max {
+              text-decoration: line-through; }
+            .cinema_film_content .cinema_film_info > .cinema_film_changci > li > div > p:nth-of-type(2) > i {
+              position: absolute;
+              right: -.20rem;
+              top: -.25rem;
+              font-size: .25rem;
+              color: #dddddd; }
 
 main {
   display: -webkit-box;
