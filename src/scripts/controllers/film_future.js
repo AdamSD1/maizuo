@@ -20,6 +20,7 @@ const render = async () => {
     scroll()
     hot_future();
     skip_detail();
+
 }
 
 

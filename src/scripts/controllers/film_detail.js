@@ -8,7 +8,7 @@ const render =async ()=>{
     let shuju = (await film_detail_model.M_data());
     let result = shuju.data.film;
     data_handling(result);
-    console.log(result)
+    // console.log(result)
     renderList(result);
 }
 

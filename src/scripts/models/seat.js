@@ -3,7 +3,7 @@
 const M_data = ()=>{
     return $.ajax({
         
-        url: '/v4/api/seating-chart/1453964034?__t=1539615195112&partyId=&fundingId=',
+        url: '/v4/api/seating-chart/823376645?__t=1539736999705&partyId=&fundingId=',
         success: (result) => {
           return result.data
         }
@@ -12,4 +12,4 @@ const M_data = ()=>{
 export default {
     M_data
 }
-//https://m.maizuo.com/v4/api/seating-chart/1453964034?__t=1539615195112&partyId=&fundingId=
+//https://m.maizuo.com/v4/api/seating-chart/823376645?__t=1539736999705&partyId=&fundingId=

@@ -22,7 +22,6 @@ import person_Controller from './controllers/person'
 /* 使用区域 */
 // 顶部和侧边直接使用
 header_nav_Controller.render();
-
 //测试座位
 header_nav_Controller.seat()
 

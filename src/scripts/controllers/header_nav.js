@@ -4,17 +4,19 @@
 import homeTpl from '../views/header_nav.html'
 import homeCity from '../views/city.html'
 import CityDate from './home_page'
-import seatTpl from '../views/seat.html'
+// import seatTpl from '../views/seat.html'
 import city from './city'
 
 
 const render = ()=>{
     document.querySelector('#root').innerHTML = homeTpl;
+    // alert(111);
+    // location.hash = "#home_page"
     changeSide();
     cityOnoff();
-    mymessage();
+
 }
-//侧边栏显隐
+//侧边栏显隐,侧边栏的所有点击事件
 const changeSide = ()=>{
     var onoff = false;
     $("#MenuOnoff").on('tap',function(){
@@ -30,6 +32,39 @@ const changeSide = ()=>{
             onoff = true;
         }
         
+    })
+    //点击我的
+    $('.mymessage').on('tap',function(){
+        location.hash = "#person";
+        $('#sideMenu').animate({
+            left:"-2.5rem"
+        },400);
+        onoff = false;
+    })
+    //点击首页
+    $('.home_page').on('tap',function(){
+        location.hash = "#home_page";
+        $('#sideMenu').animate({
+            left:"-2.5rem"
+        },400);
+        onoff = false;
+    })
+    //点击电影
+    $('.film_hot').on('tap',function(){
+        location.hash = "#film_hot";
+        $('#sideMenu').animate({
+            left:"-2.5rem"
+        },400);
+        onoff = false;
+    })
+
+    //点击影院
+    $('.cinema_list').on('tap',function(){
+        location.hash = "#cinema_list";
+        $('#sideMenu').animate({
+            left:"-2.5rem"
+        },400);
+        onoff = false;
     })
 }
 //城市点击显隐
@@ -67,12 +102,8 @@ const seat = ()=>{
         location.hash = "#seat";
     })
 }
-//点击我的
-const mymessage = ()=>{
-    $('.mymessage').on('tap',function(){
-        location.hash = "#person";
-    })
-}
+
+
 //暴露模块
 
 export default {

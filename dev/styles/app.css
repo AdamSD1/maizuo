@@ -1405,7 +1405,7 @@ main {
     flex: 1;
     width: .1px; }
     main #contentView div:nth-child(1) {
-      width: 200%;
+      width: 300%;
       height: 150%;
       position: relative;
       background: #fff; }
@@ -1437,7 +1437,8 @@ main {
       width: 100%;
       padding: .08rem .1rem;
       border-top: 1px solid lightgray;
-      border-bottom: 1px solid lightgray; }
+      border-bottom: 1px solid lightgray;
+      background: #fff; }
       main #footerbar div:nth-child(1) span {
         border-left: 2px dotted #36bfd1;
         border-right: 2px dotted #36bfd1;
