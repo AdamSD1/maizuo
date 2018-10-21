@@ -81,6 +81,7 @@ const renderList = async (list) => {
   const skip_detail = ()=>{
       $(".film_hot_list>li").on("tap",function(){
         location.href ="?"+this.id+"#film_detail";
+        // location.href ="#film_detail";
         localStorage.film_id = this.id
       })
   }

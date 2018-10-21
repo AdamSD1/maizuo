@@ -10,7 +10,6 @@ import city from './city'
 
 const render = ()=>{
     document.querySelector('#root').innerHTML = homeTpl;
-    location.hash = "#home_page"
     changeSide();
     cityOnoff();
 
