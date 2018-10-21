@@ -4,8 +4,8 @@ const render = ()=>{
         var target = e.target||e.srcElement;
         if(target.tagName == "LI"){
            $("#city").text($(target).text())
-           localStorage.cityName = $(target).text()
-           localStorage.cityId = $(target).attr('data-id')
+           document.cookie = "cityName"+"="+$(target).text();
+           document.cookie = "cityId"+"="+$(target).attr('data-id');
             location.hash = "#home_page";
         }      
     })

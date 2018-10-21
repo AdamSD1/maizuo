@@ -50,7 +50,7 @@ main{
         width: 100%!important;
         @include flex();
         div:nth-child(1){
-            width: 200%;
+            width: 300%;
             height: 150%;
             position: relative;
             background: #fff;
@@ -93,7 +93,7 @@ main{
             padding: .08rem .1rem;
             border-top: 1px solid lightgray;
             border-bottom: 1px solid lightgray;
-
+            background: #fff;
            span{
             border-left: 2px dotted #36bfd1;
             border-right: 2px dotted #36bfd1;
