@@ -111,8 +111,8 @@ return add0(m)+'月'+add0(d)+'日上映'+'      '+xingqi;
   const skip_detail = ()=>{
     $(".film_future_list>li").on("tap",function(){
       location.href ="?"+this.id+"#film_detail";
+    //   location.href ="#film_detail";
       localStorage.film_id = this.id
-
     })
 }
 

@@ -1,6 +1,7 @@
 //cinema_film的控制层
 //引入cinema_film的控制层和视图层并在此合并 暴露接口
 // 引入模块
+
 import cinema_film from "../views/cinema_film.html"
 import cinema_film_list1 from "../views/cinema_filmA.html"
 import cinema_film_listLi from "../views/cinema_filmLi.html"

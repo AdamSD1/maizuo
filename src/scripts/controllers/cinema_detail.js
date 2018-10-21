@@ -25,7 +25,8 @@ const renderList = async (list) => {
 
   //对数据进行处理
   function cinema_detail_chuli(result){
-        result.a = result.services[1].description;
+      localStorage["dncinema"] = result.name
+        // result.a = result.services[1].description;
         result.b = result.services[0].description;
   }
 
@@ -35,9 +36,19 @@ const renderList = async (list) => {
           $(this).addClass("cinema_detail_li_change").siblings().removeClass("cinema_detail_li_change");
           $(".cinema_detail_icon>p").eq($(this).index()).removeClass("cinema_detail_p_hidden").siblings("p").addClass("cinema_detail_p_hidden")
       })
-      $(".cinema_detail_liji").on("tap",function(){
-          location.hash = "#cinema_film"
-        // alert(1);
+
+    //   $(".cinema_detail_liji").on("tap",function(){
+    //       location.hash = "#cinema_film"
+    //     // alert(1);
+
+      //跳转路由
+      $('.cinema_detail_liji').on('tap',function(){
+          if(localStorage.type == "film"){
+            location.hash = "#seat";
+          }else if(localStorage.type == "cinema"){
+            location.hash = "#cinema_film";
+          }
+         
       })
   }
 

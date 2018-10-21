@@ -10,8 +10,9 @@ import city from './city'
 
 const render = ()=>{
     document.querySelector('#root').innerHTML = homeTpl;
-    // alert(111);
-    // location.hash = "#home_page"
+
+    document.cookie = "cityName=北京";
+    document.cookie = "cityId=12";
     changeSide();
     cityOnoff();
 
@@ -52,6 +53,7 @@ const changeSide = ()=>{
     //点击电影
     $('.film_hot').on('tap',function(){
         location.hash = "#film_hot";
+        localStorage.type = "film";
         $('#sideMenu').animate({
             left:"-2.5rem"
         },400);
@@ -61,6 +63,7 @@ const changeSide = ()=>{
     //点击影院
     $('.cinema_list').on('tap',function(){
         location.hash = "#cinema_list";
+        localStorage.type = "cinema";
         $('#sideMenu').animate({
             left:"-2.5rem"
         },400);
